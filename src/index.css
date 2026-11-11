@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-nutresa-50 text-nutresa-950 font-sans antialiased transition-colors duration-300; }
+  /* Modo cine: se activa con document.body.classList.toggle("cine") */
+  body.cine { @apply bg-nutresa-950 text-nutresa-100; }
+  body.cine .panel { @apply bg-nutresa-900 border-nutresa-700; }
+  :focus-visible { @apply outline-none ring-2 ring-nutresa-500 ring-offset-2; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
